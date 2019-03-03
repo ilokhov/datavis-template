@@ -1,7 +1,7 @@
 import resolve from "rollup-plugin-node-resolve";
-import commonjs from "rollup-plugin-commonjs";
 import buble from "rollup-plugin-buble";
 import { uglify } from "rollup-plugin-uglify";
+import serve from "rollup-plugin-serve";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -15,7 +15,11 @@ export default {
   },
   plugins: [
     resolve(),
-    commonjs(),
+    !production &&
+      serve({
+        contentBase: "",
+        port: 4000
+      }),
     production && buble(),
     production && uglify()
   ]
