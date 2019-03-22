@@ -2,6 +2,7 @@ import resolve from "rollup-plugin-node-resolve";
 import buble from "rollup-plugin-buble";
 import { uglify } from "rollup-plugin-uglify";
 import serve from "rollup-plugin-serve";
+import livereload from "rollup-plugin-livereload";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -20,6 +21,7 @@ export default {
         contentBase: "",
         port: 4000
       }),
+    !production && livereload(),
     production && buble(),
     production && uglify()
   ]
