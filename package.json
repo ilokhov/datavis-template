@@ -1,27 +1,25 @@
 {
-  "name": "datavis-template",
-  "version": "1.0.0",
-  "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w"
-  },
-  "prettier": {
-    "tabWidth": 2,
-    "semi": true,
-    "printWidth": 100,
-    "singleQuote": false
-  },
-  "dependencies": {
-    "d3-selection": "^1.4.0"
-  },
-  "devDependencies": {
-    "healthier": "^2.0.0",
-    "rollup": "^1.7.0",
-    "rollup-plugin-buble": "^0.19.6",
-    "rollup-plugin-livereload": "^1.0.0",
-    "rollup-plugin-node-resolve": "^4.0.1",
-    "rollup-plugin-serve": "^1.0.1",
-    "rollup-plugin-uglify": "^6.0.2",
-    "rollup-watch": "^4.3.1"
-  }
+    "name": "datavis-template",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "rollup -c",
+        "dev": "rollup -c -w"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "semi": true,
+        "printWidth": 100,
+        "singleQuote": true
+    },
+    "dependencies": {
+        "d3-selection": "^1.4.1"
+    },
+    "devDependencies": {
+        "rollup": "^1.32.1",
+        "rollup-plugin-buble": "^0.19.8",
+        "rollup-plugin-livereload": "^1.0.4",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-serve": "^1.0.1",
+        "rollup-plugin-terser": "^5.2.0"
+    }
 }
